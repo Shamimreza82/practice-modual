@@ -81,9 +81,23 @@
     
         // commentDisplay ();
 
+    function potoLode (){
+        fetch('https://jsonplaceholder.typicode.com/photos')
+        .then (res => res.json())
+        .then (photo => potoDisplay (photo) )
+    }
+    potoLode ()
 
 
+function potoDisplay (photo){
+
+    for (let items of photo){
+        const photo1 = document.getElementById ('show-post')
+        const p = document.createElement ('p'); 
+        photo1.appendChild (p);
+        console.log (items.url)
+    }
+    console.log (photo); 
+}
 
 
-
-        
